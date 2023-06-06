@@ -3,7 +3,6 @@ import { useState } from "react";
 
 export function BlogIndex() {
 
-  const [posts, setPosts] = useState([])
 
   interface Post {
     id: number;
@@ -28,10 +27,19 @@ export function BlogIndex() {
     }
   ]
   
+  const [posts, setPosts] = useState([])
 
-  // const getBlogPost = (post: Post) => {
-    
-  // }
+  return (
+    <div>
+      {posts.map((post) => (
+        <div key={post.id}>
+          <h2>{post.title}</h2>
+          <p>{post.body}</p>
+          <img src={post.image}/>
+        </div>    
+      ))}
+    </div>
+  )
 
 
 
