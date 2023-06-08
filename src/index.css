@@ -3,3 +3,7 @@
 html {
   scroll-behavior: smooth;
 }
+
+img {
+  max-width: 400px;
+}
