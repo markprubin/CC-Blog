@@ -4,7 +4,7 @@ import { useState } from "react";
 export function BlogIndex() {
 
 
-  interface Post {
+  type Post = {
     id: number;
     title: string;
     body: string;
@@ -24,10 +24,17 @@ export function BlogIndex() {
     title: "Second Blog Post", 
     body: "This is the second blog post on this blog", 
     image: "https://images.pexels.com/photos/733857/pexels-photo-733857.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+    },
+    {
+    id: 3,
+    title: "Third Blog Post", 
+    body: "This is the second blog post on this blog"
     }
   ]
+
   
-  const [posts, setPosts] = useState([])
+  
+  const [posts, setPosts] = useState(blogPost)
 
   return (
     <div>
